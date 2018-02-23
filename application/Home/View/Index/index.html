@@ -1,0 +1,79 @@
+<include file="./Application/Home/View/header.html"/>
+<link href="__PUBLIC__/css/index.css?v=20161231204509" rel="stylesheet">
+<div class="container ">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-xs-1"></div>
+        <div class="col-lg-8 col-md-8 col-xs-10">
+            <div class="row content-top">
+                <!-- 搜索框-->
+                <div class="col-md-10 col-sm-10 col-xs-8">
+                    <input type="text" class="form-control input-search" placeholder="搜索...">
+                </div>
+                <!-- 排序规则 -->
+                <div class="col-md-2 col-sm-2 col-xs-4">
+                    <div class="dropdown dropdown-order">
+                        <button class="btn btn-default dropdown-toggle btn-order" type="button" id="dropdownMenu1"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            排序
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">按最新</a></li>
+                            <li><a href="#">按热度</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 博客列表-->
+            <foreach name="posts" item="vo">
+                <div class="media">
+                    <div class="media-left">
+                        <a>
+                            <img src="__PUBLIC__/pics/{$vo['headshot_id']}.png" style="width: 100px;height:100px">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <php>$url = U('Post/content?postid=' . $vo['postid']);</php>
+                        <a href="{$url}" class="post-title"
+                           style="font-size: 25px">{$vo['title']}</a>
+                        <br>
+                        <div> {$vo['content']}
+                        </div>
+                        <div style="padding-top: 0px">{$vo['time']} &nbsp; {$vo['read_count']}</div>
+                    </div>
+                </div>
+            </foreach>
+
+
+            <div id="test"></div>
+            <!-- 分页导航条 -->
+            <div>
+                <nav>
+                    <ul class="pagination">
+                        <li id="pre">
+                            <a aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-nav-p active"><a class="page-nav" href="#">1</a></li>
+                        <?php
+    	                $per_page=($num_page>5)?(5):$num_page;
+                        for ($i=2; $i<=$per_page; $i++) {
+                        echo '
+                        <li class="page-nav-p"><a class="page-nav" href="#">'.$i.'</a></li>
+                        ';
+                        }
+                        ?>
+                        <li id="next" data-num-page="{$num_page}">
+                            <a data-num-page="{$num_page}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><!-- row -->
+</div><!-- container -->
+
+<include file="./Application/Home/View/footer.html"/>

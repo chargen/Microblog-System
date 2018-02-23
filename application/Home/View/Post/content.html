@@ -1,0 +1,15 @@
+<include file="./Application/Home/View/header.html"/>
+<div class="container post-show" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2>{$post['title']}</h2>
+            <br>
+            {$post['time']} &nbsp; {$post['read_count']}
+            <br><br>
+            {$post['content']}
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<include file="./Application/Home/View/footer.html"/>
