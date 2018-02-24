@@ -1,6 +1,4 @@
-/application/*
 config.php
-application/Runtime/
 
 Application/Runtime/
 # Windows image file caches
