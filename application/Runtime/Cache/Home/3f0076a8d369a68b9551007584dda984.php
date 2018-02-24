@@ -8,7 +8,7 @@
     <title>DBLOG</title>
     <link href="/DBLOG/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="/DBLOG/Public/jquery/jquery-1.11.3.min.js"></script>
-    <link href="/DBLOG/Public/css/global.css?v=20161231204509" rel="stylesheet">
+    <link href="/DBLOG/Public/css/global.css?v=20161231204501" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                     </a>
                 </div>
-                <div class="collapse navbar-collapse" id="">
+                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <a class="btn btn-default nav-ico" href="<?php echo U('Post/add');?>"
                            role="button">
@@ -58,7 +58,7 @@
             </script>
             <br>
             <div class="row">
-                <?php $__FOR_START_16613__=1;$__FOR_END_16613__=5;for($i=$__FOR_START_16613__;$i < $__FOR_END_16613__;$i+=1){ ?><div class="col-xs-6 col-md-3">
+                <?php $__FOR_START_1527__=1;$__FOR_END_1527__=5;for($i=$__FOR_START_1527__;$i < $__FOR_END_1527__;$i+=1){ ?><div class="col-xs-6 col-md-3">
                         <a class="thumbnail submit" headshot_id="<?php echo ($i); ?>">
                             <img src="/DBLOG/Public/pics/<?php echo ($i); ?>.png" alt="...">
                         </a>
@@ -76,7 +76,7 @@
 <footer class="bs-docs-footer">
     <div class="container">
         <div><a href="https://github.com/CyC2018/DBLOG">GitHub 仓库</a></div>
-        <p>本项目源码受 <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>开源协议保护，文档受
+        <p>本项目源码受 <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT </a>开源协议保护，文档受
             <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护。
         </p>
     </div>

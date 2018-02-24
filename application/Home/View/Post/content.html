@@ -3,10 +3,21 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h2>{$post['title']}</h2>
+            <div class="media">
+                <div class="media-left">
+                    <a>
+                        <img src="__PUBLIC__/pics/{$post['headshot_id']}.png" style="width: 60px;height:60px">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <php>$url = U('Post/content?postid=' . $post['postid']);</php>
+                    <a href="{$url}" class="post-title"
+                       style="font-size: 25px">{$post['title']}</a>
+                    <br>
+                    <div style="padding-top: 0px">{$post['time']} &nbsp; {$post['read_count']}</div>
+                </div>
+            </div>
             <br>
-            {$post['time']} &nbsp; {$post['read_count']}
-            <br><br>
             {$post['content']}
         </div>
         <div class="col-md-2"></div>

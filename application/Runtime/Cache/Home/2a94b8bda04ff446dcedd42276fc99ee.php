@@ -8,7 +8,7 @@
     <title>DBLOG</title>
     <link href="/DBLOG/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="/DBLOG/Public/jquery/jquery-1.11.3.min.js"></script>
-    <link href="/DBLOG/Public/css/global.css?v=20161231204509" rel="stylesheet">
+    <link href="/DBLOG/Public/css/global.css?v=20161231204501" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                     </a>
                 </div>
-                <div class="collapse navbar-collapse" id="">
+                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <a class="btn btn-default nav-ico" href="<?php echo U('Post/add');?>"
                            role="button">
@@ -40,8 +40,8 @@
 <link href="/DBLOG/Public/css/index.css?v=20161231204509" rel="stylesheet">
 <div class="container ">
     <div class="row">
-        <div class="col-lg-2 col-md-2 col-xs-1"></div>
-        <div class="col-lg-8 col-md-8 col-xs-10">
+        <div class="col-lg-2 col-md-2 col-xs-0"></div>
+        <div class="col-lg-8 col-md-8 col-xs-12">
             <div class="row content-top">
                 <!-- 搜索框-->
                 <div class="col-md-10 col-sm-10 col-xs-8">
@@ -56,8 +56,8 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">按最新</a></li>
-                            <li><a href="#">按热度</a></li>
+                            <li><a href="<?php echo U('Index/index','order=time');?>">按最新</a></li>
+                            <li><a href="<?php echo U('Index/index','order=read_count');?>">按热度</a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,28 +76,27 @@
                         <br>
                         <div> <?php echo ($vo['content']); ?>
                         </div>
-                        <div style="padding-top: 0px"><?php echo ($vo['time']); ?> &nbsp; <?php echo ($vo['read_count']); ?></div>
+                        <div style="padding-top: 0px"><?php echo ($vo['time']); ?> &nbsp; <?php echo ($vo['read_count']); ?> &nbsp; <?php echo ($vo['source']); ?>
+                        </div>
                     </div>
                 </div><?php endforeach; endif; ?>
 
+            <br><br>
 
-            <div id="test"></div>
             <!-- 分页导航条 -->
-            <div>
-                <nav>
+            <div style="text-align:center">
+                <nav aria-label="Page navigation">
                     <ul class="pagination">
-                        <li id="pre">
-                            <a aria-label="Previous">
+                        <li>
+                            <?php $pre_page = get_pre_page($page); $url = U('Index/index?page=' . $pre_page); ?>
+                            <a href="<?php echo ($url); ?>" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
-                        <li class="page-nav-p active"><a class="page-nav" href="#">1</a></li>
-                        <?php
- $per_page=($num_page>5)?(5):$num_page; for ($i=2; $i<=$per_page; $i++) { echo '
-                        <li class="page-nav-p"><a class="page-nav" href="#">'.$i.'</a></li>
-                        '; } ?>
-                        <li id="next" data-num-page="<?php echo ($num_page); ?>">
-                            <a data-num-page="<?php echo ($num_page); ?>" aria-label="Next">
+                        <li class="active"><a><?php echo ($page + 1); ?></a></li>
+                        <li>
+                            <?php $next_page = get_next_page($page); $url = U('Index/index?page=' . $next_page); ?>
+                            <a href="<?php echo ($url); ?>" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
@@ -105,6 +104,7 @@
                 </nav>
             </div>
         </div>
+        <div class="col-lg-2 col-md-2 col-xs-0"></div>
     </div><!-- row -->
 </div><!-- container -->
 
@@ -112,7 +112,7 @@
 <footer class="bs-docs-footer">
     <div class="container">
         <div><a href="https://github.com/CyC2018/DBLOG">GitHub 仓库</a></div>
-        <p>本项目源码受 <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>开源协议保护，文档受
+        <p>本项目源码受 <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT </a>开源协议保护，文档受
             <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护。
         </p>
     </div>
