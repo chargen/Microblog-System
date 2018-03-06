@@ -1,4 +1,6 @@
 config.php
+Thinkphp/
+.idea/
 
 Application/Runtime/
 # Windows image file caches

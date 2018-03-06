@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //添加文章数据提交
+    // 添加文章数据提交
     $(".submit").click(function () {
         var editor = UM.getEditor('myEditor');
         var content = editor.getContent();
@@ -13,13 +13,13 @@ $(document).ready(function () {
             input.focus();
             return;
         }
-        var url = "/DBLOG/index.php?s=/Home/Post/add_handle";
+        var url = "/dblog/index.php?s=/Home/Post/add_handle";
         $.post(url, {
             title: title,
             content: content,
             headshot_id: $(this).attr("headshot_id")
         }, function (data) {
-            location.replace("/DBLOG/index.php?s=/Home/Post/content/postid/" + data);
+            location.replace("/dblog/index.php?s=/Home/Post/content/postid/" + data);
         });
     });
 });
