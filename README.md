@@ -1,7 +1,5 @@
 ﻿# Distributed Blog System
 
-[TOC]
-
 ## 场景模拟
 
 假设一个博客系统拥有 10<sup>5</sup> 用户，每个用户平均有 10 篇的文章，每篇文章平均大小为 1kb，那么存储这些文章总共需要大约 1GB 的空间。
@@ -70,7 +68,7 @@ Requests per second:    4839.62 [#/sec] (mean)
 
 ### 1. 主从复制
 
-![](index_files/1.png)
+![](pics/1.png)
 
 主要涉及三个线程：binlog 线程、I/O 线程和 SQL 线程。
 
@@ -80,7 +78,7 @@ Requests per second:    4839.62 [#/sec] (mean)
 
 ### 2. 读写分离
 
-![](index_files/2.png)
+![](pics/2.png)
 
 主服务器用来处理写操作，而从服务器用来处理读操作。
 
