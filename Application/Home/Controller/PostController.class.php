@@ -22,11 +22,11 @@ class PostController extends Controller
 
     public function content()
     {
-        $post_M = M('post');
-        $map['postid'] = $_GET['postid'];
+        $post_id = $_GET['postid'];
+        $map['postid'] = $post_id;
         // 阅读量加 1
-        $post_M->where($map)->setInc('read_count');
-        $post = $post_M->where($map)->find();
+        inc_read_count($post_id);
+        $post = get_post($post_id);
         $this->assign("post", $post);
         $this->display();
     }
