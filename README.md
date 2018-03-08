@@ -26,8 +26,8 @@
 
 ### 硬件
 
-CPU : 1  Intel(R) Xeon(R) CPU E5-26xx v4
-内存 :  Size: 1024 MB Type: RAM
+- CPU : 1  Intel(R) Xeon(R) CPU E5-26xx v4
+- 内存 :  Size: 1024 MB Type: RAM
 
 ### 软件
 
