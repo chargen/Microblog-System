@@ -1,6 +1,7 @@
 config.php
 Thinkphp/
 .idea/
+composer.json
 
 Application/Runtime/
 # Windows image file caches
