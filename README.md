@@ -1,6 +1,9 @@
-# Distributed Blog System
 
-<div align="center"> <img src="pics/4.png" width="400" /> </div>
+
+<div align="center"> 
+      <h1> Distributed Blog System </h1>
+      <img src="pics/4.png" width="400" />
+</div>
 
 ## 场景模拟
 
