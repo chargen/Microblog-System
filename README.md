@@ -1,8 +1,5 @@
 # Distributed Blog System
 
-[![Travis branch](https://img.shields.io/travis/USER/REPO/BRANCH.svg)](https://github.com/CyC2018/Distributed-Blog-System) [![PHP from Travis config](https://img.shields.io/travis/php-v/symfony/symfony.svg)](https://github.com/CyC2018/Distributed-Blog-System)
-
-
 ## 场景模拟
 
 - 假设一个博客系统拥有 10<sup>5</sup> 用户，每个用户平均有 10 篇的文章，每篇文章平均大小为 1kb，那么存储这些文章总共需要大约 1GB 的空间。
