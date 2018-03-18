@@ -1,6 +1,6 @@
 # Distributed Blog System
 
-![](pics/3.png)
+![](pics/4.png)
 
 ## 场景模拟
 
