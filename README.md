@@ -1,4 +1,8 @@
-﻿# Distributed Blog System
+# Distributed Blog System
+
+[![Travis](https://img.shields.io/travis/USER/REPO.svg)](https://github.com/CyC2018/Distributed-Blog-System) 
+[![PHP from Travis config](https://img.shields.io/travis/php-v/symfony/symfony.svg)](https://github.com/CyC2018/Distributed-Blog-System)
+
 
 ## 场景模拟
 
