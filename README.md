@@ -1,6 +1,6 @@
 # Distributed Blog System
 
-<img src="pics/4.png" width="400" />
+<div align="center"> <img src="pics/4.png" width="400" /> </div>
 
 ## 场景模拟
 
