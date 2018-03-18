@@ -1,6 +1,6 @@
 # Distributed Blog System
 
-![](pics/4.png)
+<img src="pics/4.png" width="400" />
 
 ## 场景模拟
 
