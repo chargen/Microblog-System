@@ -2,7 +2,7 @@
 
 <div align="center"> 
       <h1> 基于主从复制的博客系统实现 </h1>
-      <img src="pics/4.png" width="400" />
+      <img src="pics/4.png" width="350" />
 </div>
 
 ## 场景模拟
