@@ -72,7 +72,7 @@ Requests per second:    4839.62 [#/sec] (mean)
 
 ### 1. 主从复制
 
-![](pics/5.png)
+<div align="center"> <img src="pics/5.png" width="" /> </div>
 
 主要涉及三个线程：binlog 线程、I/O 线程和 SQL 线程。
 
@@ -82,7 +82,7 @@ Requests per second:    4839.62 [#/sec] (mean)
 
 ### 2. 读写分离
 
-![](pics/6.png)
+<div align="center"> <img src="pics/6.png" width="" /> </div>
 
 主服务器用来处理写操作，而从服务器用来处理读操作。
 
