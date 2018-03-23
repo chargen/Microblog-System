@@ -82,7 +82,7 @@ Requests per second:    4839.62 [#/sec] (mean)
 
 ### 2. 读写分离
 
-![](pics/2.png)
+![](pics/6.png)
 
 主服务器用来处理写操作，而从服务器用来处理读操作。
 
