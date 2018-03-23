@@ -72,7 +72,7 @@ Requests per second:    4839.62 [#/sec] (mean)
 
 ### 1. 主从复制
 
-![](pics/1.png)
+![](pics/5.png)
 
 主要涉及三个线程：binlog 线程、I/O 线程和 SQL 线程。
 
