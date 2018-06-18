@@ -1,7 +1,7 @@
-package com.smart.service.impl;
+package com.cyc.service.impl;
 
-import com.smart.dao.BlogDao;
-import com.smart.service.BlogService;
+import com.cyc.dao.BlogDao;
+import com.cyc.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

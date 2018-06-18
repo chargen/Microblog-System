@@ -1,4 +1,4 @@
-package com.smart.dao;
+package com.cyc.dao;
 
 import org.springframework.stereotype.Repository;
 

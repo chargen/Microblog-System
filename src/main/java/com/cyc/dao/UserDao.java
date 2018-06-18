@@ -1,13 +1,10 @@
-package com.smart.dao;
+package com.cyc.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class UserDao {
-    private JdbcTemplate jdbcTemplate;
-
     private final static String INSERT_USER_SQL =
             " INSERT INTO user(name, head, md5password) " +
                     " values(?,?,?) ";
@@ -37,9 +34,4 @@ public class UserDao {
 //        });
 //        return user;
 //    }
-
-    @Autowired
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
 }

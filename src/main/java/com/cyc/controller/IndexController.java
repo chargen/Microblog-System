@@ -1,6 +1,6 @@
-package com.smart.web;
+package com.cyc.controller;
 
-import com.smart.service.BlogService;
+import com.cyc.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

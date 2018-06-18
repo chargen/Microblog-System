@@ -12,16 +12,14 @@
 
     <!-- 配置 SpringMVC -->
     <!-- 开启 SpringMVC 注解模式 -->
-    <!-- 简化配置：
-        自动注册 DefaultAnootationHandlerMapping, AnotationMethodHandlerAdapter
-        提供一些列：数据绑定，数字和日期的 format @NumberFormat, @DateTimeFormat, xml,json 默认读写支持
-    -->
+    <!--简化配置：-->
+    <!--自动注册 DefaultAnootationHandlerMapping, AnotationMethodHandlerAdapter-->
+    <!--提供一些列：数据绑定，数字和日期的 format @NumberFormat, @DateTimeFormat, xml,json 默认读写支持-->
     <mvc:annotation-driven/>
 
-    <!-- 静态资源默认 servlet 配置
-        加入对静态资源的处理
-        允许使用"/"做整体映射
-     -->
+    <!--静态资源默认 servlet 配置-->
+    <!--加入对静态资源的处理-->
+    <!--允许使用"/"做整体映射-->
     <mvc:default-servlet-handler/>
 
     <!-- 配置 jsp 显示 ViewResolver -->
@@ -31,6 +29,4 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!-- 扫描 web 相关的 bean -->
-    <context:component-scan base-package="com.smart.web"/>
 </beans>

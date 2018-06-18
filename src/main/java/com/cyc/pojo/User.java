@@ -1,4 +1,4 @@
-package com.smart.pojo;
+package com.cyc.pojo;
 
 import java.io.Serializable;
 

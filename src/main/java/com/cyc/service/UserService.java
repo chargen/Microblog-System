@@ -1,8 +1,6 @@
-package com.smart.service;
+package com.cyc.service;
 
-import com.smart.dao.UserDao;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.cyc.dao.UserDao;
 
 public class UserService {
     private UserDao userDao;

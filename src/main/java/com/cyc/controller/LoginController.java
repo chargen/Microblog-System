@@ -1,4 +1,4 @@
-package com.smart.web;
+package com.cyc.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 

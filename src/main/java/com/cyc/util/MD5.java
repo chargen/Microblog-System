@@ -1,4 +1,4 @@
-package com.smart.util;
+package com.cyc.util;
 
 import org.springframework.util.DigestUtils;
 

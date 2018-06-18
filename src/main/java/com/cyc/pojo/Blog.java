@@ -1,4 +1,4 @@
-package com.smart.pojo;
+package com.cyc.pojo;
 
 public class Blog {
     private int blogId;

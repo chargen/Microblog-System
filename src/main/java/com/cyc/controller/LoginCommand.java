@@ -1,4 +1,4 @@
-package com.smart.web;
+package com.cyc.controller;
 
 public class LoginCommand {
     private String userName;
