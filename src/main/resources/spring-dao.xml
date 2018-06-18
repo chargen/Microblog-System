@@ -31,7 +31,6 @@
         <!--<property name="removeAbandonedTimeout" value="120" />-->
         <!-- #连接的超时时间，默认为半小时。 -->
         <property name="minEvictableIdleTimeMillis" value="${db.minEvictableIdleTimeMillis}"/>
-
         <!--# 失效检查线程运行时间间隔，要小于MySQL默认-->
         <property name="timeBetweenEvictionRunsMillis" value="40000"/>
         <!--# 检查连接是否有效-->
@@ -40,25 +39,20 @@
         <property name="validationQuery" value="SELECT 1 FROM dual"/>
     </bean>
 
+    <!-- 配置 SqlSessionFactory 对象 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 注入数据库连接池 -->
         <property name="dataSource" ref="dataSource"/>
-        <!--<property name="mapperLocations" value="classpath*:mappers/*Mapper.xml"></property>-->
-        <!-- 分页插件 -->
-        <property name="plugins">
-            <array>
-                <bean class="com.github.pagehelper.PageHelper">
-                    <property name="properties">
-                        <value>
-                            dialect=mysql
-                        </value>
-                    </property>
-                </bean>
-            </array>
-        </property>
+        <!-- 配置 MyBaties 全局配置文件: mybatis-config.xml -->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="typeAliasesPackage" value="com.cyc.pojo"/>
+        <!-- 扫描 sql 配置文件: mapper 需要的 xml 文件 -->
+        <property name="mapperLocations" value="classpath:mappers/*.xml"/>
     </bean>
+
 
     <bean name="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.mmall.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="com.cyc.dao"/>
     </bean>
-
 </beans>

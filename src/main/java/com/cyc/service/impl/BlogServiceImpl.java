@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+//@ComponentScan(basePackages=("com.cyc.dao.BlogDao"))
 public class BlogServiceImpl implements BlogService {
 
     @Autowired

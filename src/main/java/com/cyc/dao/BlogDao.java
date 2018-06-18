@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BlogDao {
 
-    int selectBlogCount();
+    int  selectBlogCount();
 
 //    private JdbcTemplate jdbcTemplate;
 //
